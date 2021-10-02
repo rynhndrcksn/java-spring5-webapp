@@ -1,0 +1,27 @@
+:root {
+    --primary-color: #1f2d42;
+    --secondary-color: #00cfd5;
+}
+
+.bg-color-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-color-secondary {
+    background-color: var(--secondary-color);
+}
+
+.text-color-primary {
+    color: var(--primary-color);
+}
+
+.text-color-secondary {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 767px) {
+    .avatar-size {
+        height: 90%;
+        width: 90%;
+    }
+}
