@@ -18,10 +18,3 @@
 .text-color-secondary {
     color: var(--secondary-color);
 }
-
-@media (max-width: 767px) {
-    .avatar-size {
-        height: 90%;
-        width: 90%;
-    }
-}
