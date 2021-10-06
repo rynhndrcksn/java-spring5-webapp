@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class IndexController {
+
 	/**
 	 * Will return index page for anyone navigating to: site.com, site.com/, site.com/index, site.com/index.html
 	 *
