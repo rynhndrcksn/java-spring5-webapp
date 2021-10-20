@@ -6,6 +6,22 @@
 <body>
 <header th:replace="fragments/parts :: header"></header>
 
+<section class="pt-3 pb-2">
+    <div class="container">
+        <h2 class="text-center">Employment History</h2>
+        <div th:each="job : ${jobs}" class="row lead border-top pt-3 pb-2">
+            <div class="col-md mx-auto text-center">
+                <h3 th:text="${job.name}"></h3>
+                <p th:text="'Start Date: ' + ${job.startDate}"></p>
+                <p th:text="'End Date: ' + ${job.endDate}"></p>
+            </div>
+            <div class="col-md mx-auto">
+                <p th:text="${job.description}"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer th:replace="fragments/parts :: footer"></footer>
 </body>
 </html>
