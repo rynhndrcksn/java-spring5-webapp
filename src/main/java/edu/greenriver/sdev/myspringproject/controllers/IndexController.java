@@ -19,9 +19,6 @@ public class IndexController {
 	 */
 	@RequestMapping(value = {"", "/", "/index", "/index.html"})
 	public String index() {
-		// date will go here eventually
-
-		// return the template/view for index.html
 		return "index";
 	}
 }
