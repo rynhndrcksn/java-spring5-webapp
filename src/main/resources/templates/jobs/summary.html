@@ -11,7 +11,7 @@
         <h2 class="text-center">Employment History</h2>
         <div th:each="job : ${jobs}" class="row lead border-top pt-3 pb-2">
             <div class="col-md mx-auto text-center">
-                <h3 th:text="${job.name}"></h3>
+                <a th:href="@{one+'/'+${job.jobID}}"><h3 th:text="${job.name}"></h3></a>
                 <p th:text="'Start Date: ' + ${job.startDate}"></p>
                 <p th:text="'End Date: ' + ${job.endDate}"></p>
             </div>
