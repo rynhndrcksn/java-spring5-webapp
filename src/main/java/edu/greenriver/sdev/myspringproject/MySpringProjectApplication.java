@@ -33,21 +33,25 @@ public class MySpringProjectApplication {
 		// add some jobs
 		Job[] jobs = {
 				Job.builder().name("Job 1")
+						.employer("Employer 1")
 						.startDate(LocalDate.now())
 						.endDate(null)
 						.description("Desc 1")
 						.build(),
 				Job.builder().name("Job 2")
+						.employer("Employer 2")
 						.startDate(LocalDate.of(2020, 8, 20))
 						.endDate(LocalDate.of(2020, 9, 1))
 						.description("Desc 2")
 						.build(),
 				Job.builder().name("Job 3")
+						.employer("Employer 3")
 						.startDate(LocalDate.of(2019, 3, 15))
 						.endDate(LocalDate.of(2020, 8, 2))
 						.description("Desc 3")
 						.build(),
 				Job.builder().name("Job 4")
+						.employer("Employer 4")
 						.startDate(LocalDate.of(2019, 1, 1))
 						.endDate(LocalDate.of(2019, 3, 10))
 						.description("Desc 4")

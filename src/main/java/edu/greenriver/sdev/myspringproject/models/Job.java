@@ -28,6 +28,7 @@ public class Job implements Comparable<Job> {
 	private int jobID;
 
 	private String name;
+	private String employer;
 	private LocalDate startDate;
 	private LocalDate endDate;
 	private String description;
