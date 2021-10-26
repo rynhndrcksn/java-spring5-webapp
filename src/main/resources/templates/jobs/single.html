@@ -11,7 +11,7 @@
         <h2 class="text-center">Employment History</h2>
         <div class="row lead border-top pt-3 pb-2">
             <div class="col-md mx-auto text-center">
-                <h3 th:text="${job.name}"></h3>
+                <h3 th:text="${job.getPosition}"></h3>
                 <p th:text="${job.employer}"></p>
                 <p th:text="'Start Date: ' + ${job.startDate}"></p>
                 <p th:text="'End Date: ' + ${job.endDate}"></p>

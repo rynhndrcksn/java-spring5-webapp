@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head th:replace="fragments/parts :: meta('Add a new job')">
+    <title></title>
+</head>
+<body>
+<header th:replace="fragments/parts :: header"></header>
+
+<section class="pt-3 pb-2 container">
+    <h2 class="text-center mb-3">Add a new job!</h2>
+    <form action="">
+        <!-- JOB POSITION/EMPLOYER -->
+        <div class="row g-3 pb-3">
+            <div class="form-floating col-md-6">
+                <input type="text" class="form-control" id="position" placeholder="Position">
+                <label for="position">Position</label>
+            </div>
+            <div class="form-floating col-md-6">
+                <input type="text" class="form-control" id="employer" placeholder="Employer">
+                <label for="employer">Employer</label>
+            </div>
+        </div>
+        <!-- START/END DATE -->
+        <div class="row g-3 pb-3">
+            <div class="form-floating col-md-6">
+                <input type="date" class="form-control" id="startDate" placeholder="Start Date">
+                <label for="startDate">Start Date</label>
+            </div>
+            <div class="form-floating col-md-6">
+                <input type="date" class="form-control" id="endDate" placeholder="End Date">
+                <label for="endDate">End Date</label>
+            </div>
+        </div>
+        <div class="row g-3 pb-3">
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Description" id="description"></textarea>
+                <label for="description">Description</label>
+            </div>
+        </div>
+        <div class="col-12 pb-2">
+            <button type="submit" class="btn btn-primary text-color-primary bg-color-secondary">Submit</button>
+        </div>
+    </form>
+</section>
+
+<footer th:replace="fragments/parts :: footer"></footer>
+</body>
+</html>

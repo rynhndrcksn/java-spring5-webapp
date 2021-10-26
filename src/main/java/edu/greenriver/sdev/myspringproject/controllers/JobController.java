@@ -29,7 +29,7 @@ public class JobController {
 	 * Returns a summary of all jobs
 	 *
 	 * @param model - Model object to manipulate views
-	 * @return "jobs/summary"
+	 * @return "jobs/all"
 	 */
 	@RequestMapping("all")
 	public String getAll(Model model) {
@@ -42,7 +42,7 @@ public class JobController {
 	 *
 	 * @param model - Model object to manipulate views
 	 * @param job - ID of job to return
-	 * @return "jobs/single"
+	 * @return "jobs/one/{id}"
 	 */
 	@RequestMapping("one/{job}")
 	public String getOne(Model model, @PathVariable int job) {

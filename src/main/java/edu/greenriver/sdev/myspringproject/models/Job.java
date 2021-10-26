@@ -24,7 +24,7 @@ public class Job implements Comparable<Job> {
 	@GeneratedValue(strategy = GenerationType.AUTO) // this is auto-increment the primary key
 	private int jobID;
 
-	private String name;
+	private String position;
 	private String employer;
 
 	@Column(name = "start_date")
