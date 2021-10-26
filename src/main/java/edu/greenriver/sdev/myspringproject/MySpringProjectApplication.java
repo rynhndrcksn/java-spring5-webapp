@@ -24,11 +24,7 @@ public class MySpringProjectApplication {
 	 * @param args - not used.
 	 */
 	public static void main(String[] args) {
-		// get spring container
-		ApplicationContext context = SpringApplication.run(MySpringProjectApplication.class, args);
-
-		// get the data layer bean
-		IJobRepo jobRepo = context.getBean(IJobRepo.class);
+		SpringApplication.run(MySpringProjectApplication.class, args);
 	}
 
 }
