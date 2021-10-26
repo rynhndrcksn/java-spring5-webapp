@@ -34,7 +34,7 @@ public class Job implements Comparable<Job> {
 	private String description;
 
 	@Override
-	public int compareTo(Job o) {
-		return this.startDate.compareTo(o.startDate);
+	public int compareTo(Job other) {
+		return this.startDate.compareTo(other.startDate);
 	}
 }
