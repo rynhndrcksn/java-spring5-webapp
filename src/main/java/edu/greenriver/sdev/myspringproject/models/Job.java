@@ -5,10 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 /**
@@ -29,7 +26,11 @@ public class Job implements Comparable<Job> {
 
 	private String name;
 	private String employer;
+
+	@Column(name = "start_date")
 	private LocalDate startDate;
+
+	@Column(name = "end_date")
 	private LocalDate endDate;
 	private String description;
 
