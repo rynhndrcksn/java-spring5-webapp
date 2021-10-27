@@ -8,32 +8,33 @@
 
 <section class="pt-3 pb-2 container">
     <h2 class="text-center mb-3">Add a new job!</h2>
-    <form action="">
+    <form method="post" th:action="@{/jobs/form}" th:object="${job}">
         <!-- JOB POSITION/EMPLOYER -->
         <div class="row g-3 pb-3">
             <div class="form-floating col-md-6">
-                <input type="text" class="form-control" id="position" placeholder="Position">
+                <input type="text" class="form-control" id="position" placeholder="Position" th:field="*{position}">
                 <label for="position">Position</label>
             </div>
             <div class="form-floating col-md-6">
-                <input type="text" class="form-control" id="employer" placeholder="Employer">
+                <input type="text" class="form-control" id="employer" placeholder="Employer" th:field="*{employer}">
                 <label for="employer">Employer</label>
             </div>
         </div>
         <!-- START/END DATE -->
         <div class="row g-3 pb-3">
             <div class="form-floating col-md-6">
-                <input type="date" class="form-control" id="startDate" placeholder="Start Date">
+                <input type="date" class="form-control" id="startDate" placeholder="Start Date" th:field="*{startDate}">
                 <label for="startDate">Start Date</label>
             </div>
             <div class="form-floating col-md-6">
-                <input type="date" class="form-control" id="endDate" placeholder="End Date">
+                <input type="date" class="form-control" id="endDate" placeholder="End Date" th:field="*{{endDate}}">
                 <label for="endDate">End Date</label>
             </div>
         </div>
         <div class="row g-3 pb-3">
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Description" id="description"></textarea>
+                <textarea class="form-control" placeholder="Description" id="description" th:field="*{description}">
+                </textarea>
                 <label for="description">Description</label>
             </div>
         </div>

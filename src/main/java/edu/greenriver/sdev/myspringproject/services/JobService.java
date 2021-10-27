@@ -28,6 +28,15 @@ public class JobService {
 	}
 
 	/**
+	 * saves a job object to the database
+	 *
+	 * @param job a job object to save
+	 */
+	public void saveJob(Job job) {
+		jobRepo.save(job);
+	}
+
+	/**
 	 * Returns all jobs
 	 *
 	 * @return a List of all Jobs
@@ -39,7 +48,7 @@ public class JobService {
 	/**
 	 * Returns a single job by ID
 	 *
-	 * @param id - ID of job to return
+	 * @param id ID of job to return
 	 * @return a Job object
 	 */
 	public Job oneJob(int id) {

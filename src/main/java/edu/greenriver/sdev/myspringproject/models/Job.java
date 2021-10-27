@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -21,16 +22,18 @@ import java.time.LocalDate;
 @Entity // this marks the as a Hibernated Entity (table will be created to store Job objects)
 public class Job implements Comparable<Job> {
 	@Id // this is a primary key
-	@GeneratedValue(strategy = GenerationType.AUTO) // this is auto-increment the primary key
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // this is auto-increment the primary key
 	private int jobID;
 
 	private String position;
 	private String employer;
 
 	@Column(name = "start_date")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate startDate;
 
 	@Column(name = "end_date")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate endDate;
 	private String description;
 
