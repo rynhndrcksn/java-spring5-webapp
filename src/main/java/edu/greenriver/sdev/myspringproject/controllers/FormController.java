@@ -67,12 +67,24 @@ public class FormController {
 	/**
 	 * saves the edited Job object
 	 *
-	 * @param job Job object to save to DB
+	 * @param job a Job object to save to DB
 	 * @return redirect:/jobs/all
 	 */
 	@PostMapping("edit/{id}")
 	public String updateForm(@ModelAttribute Job job) {
 		service.saveJob(job);
+		return "redirect:/jobs/all";
+	}
+
+	/**
+	 * deletes a Job object from the DB by id
+	 *
+	 * @param id of Job object to delete
+	 * @return redirect:jobs/all
+	 */
+	@GetMapping("delete/{id}")
+	public String deleteJob(@PathVariable int id) {
+		service.deleteJob(id);
 		return "redirect:/jobs/all";
 	}
 

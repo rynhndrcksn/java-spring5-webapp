@@ -65,6 +65,15 @@ public class JobService {
 		return jobRepo.findAll().get(rand.nextInt(jobRepo.findAll().size()));
 	}
 
+	/**
+	 * deletes a job from DB via id
+	 *
+	 * @param id id of record in DB to delete
+	 */
+	public void deleteJob(int id) {
+		jobRepo.deleteById(id);
+	}
+
 	@Override
 	public String toString() {
 		return "JobService{" +
