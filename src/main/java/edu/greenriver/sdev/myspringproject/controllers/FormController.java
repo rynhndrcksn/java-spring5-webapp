@@ -4,10 +4,7 @@ import edu.greenriver.sdev.myspringproject.models.Job;
 import edu.greenriver.sdev.myspringproject.services.JobService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * controller for form pages
@@ -36,7 +33,7 @@ public class FormController {
 	 * @param model Model object to load things to form
 	 * @return forms/form
 	 */
-	@GetMapping("form")
+	@GetMapping("create")
 	public String loadForm(Model model) {
 		model.addAttribute("job", new Job());
 		return "forms/form";
@@ -48,8 +45,33 @@ public class FormController {
 	 * @param job Job object to edit
 	 * @return redirect:/jobs/all
 	 */
-	@PostMapping("form")
-	public String editForm(@ModelAttribute Job job) {
+	@PostMapping("create")
+	public String handleForm(@ModelAttribute Job job) {
+		service.saveJob(job);
+		return "redirect:/jobs/all";
+	}
+
+	/**
+	 * edits a Job in the DB located by {id}
+	 *
+	 * @param model model Object to load things to the view
+	 * @param id id of Job in DB to edit
+	 * @return forms/form
+	 */
+	@GetMapping("edit/{id}")
+	public String editForm(Model model, @PathVariable int id) {
+		model.addAttribute("job", service.oneJob(id));
+		return "forms/form";
+	}
+
+	/**
+	 * saves the edited Job object
+	 *
+	 * @param job Job object to save to DB
+	 * @return redirect:/jobs/all
+	 */
+	@PostMapping("edit/{id}")
+	public String updateForm(@ModelAttribute Job job) {
 		service.saveJob(job);
 		return "redirect:/jobs/all";
 	}

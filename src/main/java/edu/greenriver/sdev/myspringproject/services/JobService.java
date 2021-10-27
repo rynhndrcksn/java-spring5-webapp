@@ -29,7 +29,7 @@ public class JobService {
 
 	/**
 	 * saves a job object to the database
-	 *
+	 * CREATE/UPDATE
 	 * @param job a job object to save
 	 */
 	public void saveJob(Job job) {
@@ -38,7 +38,7 @@ public class JobService {
 
 	/**
 	 * Returns all jobs
-	 *
+	 * READ
 	 * @return a List of all Jobs
 	 */
 	public List<Job> allJobs() {
@@ -47,7 +47,7 @@ public class JobService {
 
 	/**
 	 * Returns a single job by ID
-	 *
+	 * READ
 	 * @param id ID of job to return
 	 * @return a Job object
 	 */
@@ -57,7 +57,7 @@ public class JobService {
 
 	/**
 	 * Returns a random job
-	 *
+	 * READ
 	 * @return a random Job
 	 */
 	public Job random() {
