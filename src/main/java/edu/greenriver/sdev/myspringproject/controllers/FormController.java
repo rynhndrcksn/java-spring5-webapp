@@ -40,7 +40,7 @@ public class FormController {
 	}
 
 	/**
-	 * loads a form to edit a Job object
+	 * saves a Job object to DB
 	 *
 	 * @param job Job object to edit
 	 * @return redirect:/jobs/all
@@ -62,18 +62,6 @@ public class FormController {
 	public String editForm(Model model, @PathVariable int id) {
 		model.addAttribute("job", service.oneJob(id));
 		return "forms/form";
-	}
-
-	/**
-	 * saves the edited Job object
-	 *
-	 * @param job a Job object to save to DB
-	 * @return redirect:/jobs/all
-	 */
-	@PostMapping("edit/{id}")
-	public String updateForm(@ModelAttribute Job job) {
-		service.saveJob(job);
-		return "redirect:/jobs/all";
 	}
 
 	/**
