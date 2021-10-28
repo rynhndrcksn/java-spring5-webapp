@@ -27,7 +27,7 @@
                 <label for="startDate">Start Date</label>
             </div>
             <div class="form-floating col-md-6">
-                <input type="date" class="form-control" id="endDate" placeholder="End Date" th:field="*{{endDate}}">
+                <input type="date" class="form-control" id="endDate" placeholder="End Date" th:field="*{endDate}">
                 <label for="endDate">End Date</label>
             </div>
         </div>
@@ -38,6 +38,7 @@
                 <label for="description">Description</label>
             </div>
         </div>
+        <!-- SUBMIT FORM -->
         <div class="col-12 pb-2">
             <button type="submit" class="btn btn-primary text-color-primary bg-color-secondary">Submit</button>
         </div>
