@@ -9,6 +9,8 @@
 <section class="pt-3 pb-2 container">
     <h2 class="text-center mb-3">Add a new job!</h2>
     <form method="post" th:action="@{/jobs/create}" th:object="${job}">
+        <label for="id" class="d-none"></label>
+        <input type="text" class="d-none" id="id" th:field="*{jobID}">
         <!-- JOB POSITION/EMPLOYER -->
         <div class="row g-3 pb-3">
             <div class="form-floating col-md-6">
