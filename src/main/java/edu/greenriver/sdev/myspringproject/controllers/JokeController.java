@@ -2,8 +2,6 @@ package edu.greenriver.sdev.myspringproject.controllers;
 
 import edu.greenriver.sdev.myspringproject.services.JokeService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -13,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @version 1.0
  */
 @Controller
-@RequestMapping("jokes") // tells everything below to prepend jobs/ before the route
+@RequestMapping("jokes") // tells everything below to prepend jokes/ before the route
 public class JokeController {
 	private JokeService service;
 
@@ -29,26 +27,11 @@ public class JokeController {
 	/**
 	 * Returns a summary of all Jokes
 	 *
-	 * @param model Model object to manipulate views
 	 * @return "jokes/all"
 	 */
-	@RequestMapping("all")
-	public String getAll(Model model) {
-		model.addAttribute("jokes", service.getAllJokes());
-		return "jokes/summary";
-	}
-
-	/**
-	 * Returns a single Joke by ID
-	 *
-	 * @param model - Model object to manipulate views
-	 * @param id - ID of joke to return
-	 * @return "jokes/{id}"
-	 */
-	@RequestMapping("{id}")
-	public String getOne(Model model, @PathVariable int id) {
-		model.addAttribute("job", service.getJoke(id));
-		return "jokes/single";
+	@RequestMapping(value = {"", "{id}"}) // http://localhost:8080/jokes OR http://localhost:8080/jokes/{id}
+	public String getJokes() {
+		return "jokes/index";
 	}
 
 	@Override

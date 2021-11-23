@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head th:fragment="meta(title)">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
+    <script src="/js/jokes.js"></script>
     <link rel="stylesheet" href="/webjars/bootstrap/5.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title th:text="${title}"></title>
+    <title>Jokes Endpoint</title>
 </head>
 <body>
 <!-- HEADER START -->
-<header th:fragment="header" class="row-cols-1">
+<header class="row-cols-1">
     <nav class="navbar navbar-expand-lg navbar-light bg-color-secondary">
         <div class="container">
             <a class="navbar-brand" href="/index">Ryan Hendrickson</a>
@@ -33,8 +33,24 @@
 </header>
 <!-- HEADER END -->
 
+<!-- CONTENT START -->
+<section class="pt-3 pb-2">
+    <div class="container">
+        <h1 class="text-center">Joke(s)!</h1>
+        <div class="row pt-5 col-md-10 mx-auto lead">
+            <div class="col-md-4 text-center" id="setup">
+
+            </div>
+            <div class="col-md-6" id="joke">
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CONTENT END -->
+
 <!-- FOOTER START -->
-<footer th:fragment="footer" class="text-center text-white pt-3 bg-color-primary">
+<footer class="text-center text-white pt-3 bg-color-primary">
     <div class="container">
         <div class="row">
             <!-- LOCATION -->

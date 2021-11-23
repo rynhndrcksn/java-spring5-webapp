@@ -10,8 +10,8 @@ INSERT INTO job (position, employer, start_date, end_date, description) VALUES (
 INSERT INTO job (position, employer, start_date, end_date, description) VALUES ('Job 9', 'Employer 9', '2021-03-01', '2021-04-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis tincidunt id aliquet risus.');
 INSERT INTO job (position, employer, start_date, end_date, description) VALUES ('Job 10', 'Employer 10', '2021-01-01', '2021-03-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis tincidunt id aliquet risus.');
 
-INSERT INTO joke (title, joke) VALUES ('Title 1', 'Joke 1');
-INSERT INTO joke (title, joke) VALUES ('Title 2', 'Joke 2');
-INSERT INTO joke (title, joke) VALUES ('Title 3', 'Joke 3');
-INSERT INTO joke (title, joke) VALUES ('Title 4', 'Joke 4');
-INSERT INTO joke (title, joke) VALUES ('Title 5', 'Joke 5');
+INSERT INTO joke (setup, joke) VALUES ('Setup 1', 'Joke 1');
+INSERT INTO joke (setup, joke) VALUES ('Setup 2', 'Joke 2');
+INSERT INTO joke (setup, joke) VALUES ('Setup 3', 'Joke 3');
+INSERT INTO joke (setup, joke) VALUES ('Setup 4', 'Joke 4');
+INSERT INTO joke (setup, joke) VALUES ('Setup 5', 'Joke 5');

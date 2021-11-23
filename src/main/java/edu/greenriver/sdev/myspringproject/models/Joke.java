@@ -26,7 +26,7 @@ public class Joke {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // this is auto-increment the primary key
 	private int jokeID;
 
-	private String title;
+	private String setup;
 	private String joke;
 
 }
