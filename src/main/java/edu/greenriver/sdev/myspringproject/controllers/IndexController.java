@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Controller for the index page
  *
  * @author Ryan Hendrickson.
- * @version 0.5
+ * @version 1.0
  */
 @Controller
 public class IndexController {
