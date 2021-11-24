@@ -1,18 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head th:replace="fragments/parts :: meta('Ryan Hendrickson\'s Portfolio')">
+<head th:replace="fragments/parts :: meta('ACTUATOR STATISTICS 😈')">
     <title></title>
 </head>
 <body>
 <header th:replace="fragments/parts :: header"></header>
 
 <!-- MAIN START -->
-<main>
+<main class="pt-3 pb-2">
+    <div class="container">
+        <h2 class="text-center">Actuator Stats!</h2>
+        <!-- LOADED CLASSES AND CPU USAGE-->
+        <div class="row lead border-top pt-3 pb-2">
+            <div class="col-md-6 mx-auto text-center">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Loaded Classes:</h4>
+                        <div class="card-text" id="classes"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mx-auto text-center">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">CPU Usage:</h4>
+                        <div class="card-text" id="cpuUsage"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- HTTP REQUESTS AND DISK SPACE CHECK -->
+        <div class="row lead pt-3 pb-2">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">HTTP Requests:</h4>
+                        <div class="card-text" id="httpRequests"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">DB Info:</h4>
+                        <div class="card-text" id="dbHealth"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 <!-- MAIN END -->
 
 <footer th:replace="fragments/parts :: footer"></footer>
 
+<script src="/js/admin.js"></script>
 </body>
 </html>
