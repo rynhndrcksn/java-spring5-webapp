@@ -1,5 +1,5 @@
 /**
- * Wait until the window is loaded
+ * We will wait until everything is loaded before we start calling everything.
  */
 window.onload = () => {
 
@@ -67,6 +67,11 @@ window.onload = () => {
         });
 }
 
+/**
+ * Displays the amount of classes loaded in the Spring app
+ *
+ * @param data JSON data to use
+ */
 const displayClasses = (data) => {
     let classes = document.getElementById("classes");
     let classesLoaded = document.createElement("p");
@@ -85,6 +90,11 @@ const displayCpuUsage = (data) => {
     cpuUsage.appendChild(usage);
 }
 
+/**
+ * Displays HTTP data for the admin page
+ *
+ * @param data JSON data to use
+ */
 const displayHttpRequests = (data) => {
     let httpRequests = document.getElementById("httpRequests");
     let count = document.createElement("p");
@@ -100,6 +110,10 @@ const displayHttpRequests = (data) => {
     httpRequests.appendChild(max);
 }
 
+/**
+ * Displays DB health data for admin page
+ * @param data JSON data to use
+ */
 const displayHealth = (data) => {
     let health = document.getElementById("dbHealth");
     let status = document.createElement("p")

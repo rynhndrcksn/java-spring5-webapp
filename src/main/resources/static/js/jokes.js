@@ -44,7 +44,11 @@ let displayDataElements = (jsonData) => {
     }
 }
 
-// This function mostly just calls the other 3 functions to ensure everything is added properly...
+/**
+ * Displays a joke on the webpage
+ *
+ * @param data JSON data to use
+ */
 let createJoke = (data) => {
     let left = document.getElementById("setup");
     let right = document.getElementById("joke");
