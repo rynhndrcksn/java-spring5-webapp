@@ -10,8 +10,8 @@ INSERT INTO job (position, employer, start_date, end_date, description) VALUES (
 INSERT INTO job (position, employer, start_date, end_date, description) VALUES ('Job 9', 'Employer 9', '2021-03-01', '2021-04-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis tincidunt id aliquet risus.');
 INSERT INTO job (position, employer, start_date, end_date, description) VALUES ('Job 10', 'Employer 10', '2021-01-01', '2021-03-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis tincidunt id aliquet risus.');
 
-INSERT INTO joke (setup, joke) VALUES ('Setup 1', 'Joke 1');
-INSERT INTO joke (setup, joke) VALUES ('Setup 2', 'Joke 2');
-INSERT INTO joke (setup, joke) VALUES ('Setup 3', 'Joke 3');
-INSERT INTO joke (setup, joke) VALUES ('Setup 4', 'Joke 4');
-INSERT INTO joke (setup, joke) VALUES ('Setup 5', 'Joke 5');
+INSERT INTO joke (setup, joke) VALUES ('What did the evil chicken lay?', 'Deviled eggs.');
+INSERT INTO joke (setup, joke) VALUES ('Why do you never see elephants hiding in trees?', 'Because they’re so good at it.');
+INSERT INTO joke (setup, joke) VALUES ('Why don\'t pirates take a bath before they walk the plank?', 'They just wash up on shore.');
+INSERT INTO joke (setup, joke) VALUES ('When does a joke become a “dad joke?”', 'When it becomes apparent.');
+INSERT INTO joke (setup, joke) VALUES ('Why do cows wear bells?', 'Because their horns don''t work.');

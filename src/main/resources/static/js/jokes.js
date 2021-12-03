@@ -50,17 +50,20 @@ let displayDataElements = (jsonData) => {
  * @param data JSON data to use
  */
 let createJoke = (data) => {
+    let cont = document.getElementById("content");
     let left = document.getElementById("setup");
     let right = document.getElementById("joke");
-    let setup = document.createElement("p");
+    let setup = document.createElement("h4");
     let joke = document.createElement("p");
 
-    setup.innerHTML = data.setup + ": ";
+
+    setup.innerHTML = data.setup;
     joke.innerHTML = data.joke;
 
-    setup.className = "border-top";
-    joke.className = "border-top";
+    setup.className = "border-top mt-3";
+    joke.className = "border-bottom";
 
-    left.appendChild(setup);
-    right.appendChild(joke);
+    cont.className = "row";
+    cont.appendChild(setup);
+    cont.appendChild(joke);
 }
