@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head th:replace="fragments/parts :: meta('Add a new job')">
+    <title></title>
+</head>
+<body>
+<header th:replace="fragments/parts :: header"></header>
+
+<section class="pt-3 pb-2 container">
+    <h2 class="text-center mb-3">Register an account!</h2>
+    <form method="post" th:action="@{/users/register}" th:object="${user}">
+        <label for="id" class="d-none"></label>
+        <input type="text" class="d-none" id="id" th:field="*{userId}">
+        <!-- JOB POSITION/EMPLOYER -->
+        <div class="row g-3 pb-3">
+            <div class="form-floating col-md-6">
+                <input type="text" class="form-control" id="username" placeholder="Username" th:field="*{username}"
+                       name="username">
+                <label for="username">Username</label>
+            </div>
+            <div class="form-floating col-md-6">
+                <input type="password" class="form-control" id="password" placeholder="Password" th:field="*{password}"
+                       name="password">
+                <label for="password">Password</label>
+            </div>
+        </div>
+        <!-- SUBMIT FORM -->
+        <div class="col-12 pb-2">
+            <button type="submit" class="btn btn-primary text-color-primary bg-color-secondary">Submit</button>
+        </div>
+    </form>
+</section>
+
+<footer th:replace="fragments/parts :: footer"></footer>
+</body>
+</html>

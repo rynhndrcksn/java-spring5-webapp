@@ -47,15 +47,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		// Authenticate with our own DB records
 		auth.userDetailsService(service).passwordEncoder(passwordEncoder());
 
-		// Authenticate users with default test accounts
-		// NOTE: If I try using in memory authentication, it doesn't work. I have to load them in MySpringProjectApplication
-
-		/*
-		auth.inMemoryAuthentication()
-				.withUser("user").password(passwordEncoder().encode("user")).roles("user")
-				.and()
-				.withUser("admin").password(passwordEncoder().encode("admin")).roles("user", "admin");
-		 */
 	}
 
 	// Configure which files and folder are publicly available in the webapp.

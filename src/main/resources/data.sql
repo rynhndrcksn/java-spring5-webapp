@@ -12,6 +12,6 @@ INSERT INTO job (position, employer, start_date, end_date, description) VALUES (
 
 INSERT INTO joke (setup, joke) VALUES ('What did the evil chicken lay?', 'Deviled eggs.');
 INSERT INTO joke (setup, joke) VALUES ('Why do you never see elephants hiding in trees?', 'Because they’re so good at it.');
-INSERT INTO joke (setup, joke) VALUES ('Why don\'t pirates take a bath before they walk the plank?', 'They just wash up on shore.');
+INSERT INTO joke (setup, joke) VALUES ('Why do pirates not take a bath before they walk the plank?', 'They just wash up on shore.');
 INSERT INTO joke (setup, joke) VALUES ('When does a joke become a “dad joke?”', 'When it becomes apparent.');
 INSERT INTO joke (setup, joke) VALUES ('Why do cows wear bells?', 'Because their horns don''t work.');
