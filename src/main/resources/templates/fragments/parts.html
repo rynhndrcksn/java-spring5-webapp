@@ -28,7 +28,11 @@
                     <a class="nav-link" href="/jokes">Joke(s)</a>
                     <a class="nav-link" href="/admin">Admin</a>
                     <a class="nav-link" href="/users/register">Register</a>
-                    <a class="nav-link" href="/logout">Logout</a>
+                    <a class="nav-link" href="/login">Login</a>
+                    <form action="/logout" method="post" id="logout-form">
+                        <a class="nav-link logout" href="#"
+                           onclick="document.getElementById('logout-form').submit();">Logout</a>
+                    </form>
                 </div>
             </div>
         </div>

@@ -61,13 +61,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
+				// Handle what roles can access what parts of the site
 				.authorizeRequests()
 					.antMatchers("/admin/**").hasAuthority("admin")
 					.antMatchers("/jobs/**").hasAuthority("admin")
 					.antMatchers("/jokes/**").hasAnyAuthority("user")
 					.antMatchers("/**").permitAll()
 				.and()
-					.formLogin().failureForwardUrl("/login");
+					.formLogin()
+						.failureForwardUrl("/login") // Custom login :D
+						.permitAll()
+						.loginPage("/login")
+						.defaultSuccessUrl("/")
+						.failureUrl("/login?error=true")
+				.and()
+					.logout()
+					.permitAll()
+					.logoutUrl("/logout")
+					.logoutSuccessUrl("/login?logout=true")
+				.and()
+					.csrf()
+						.disable();
 	}
 
 	@Override

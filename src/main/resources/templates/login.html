@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head th:replace="fragments/parts :: meta('Register an account!')">
+<head th:replace="fragments/parts :: meta('Login to account!')">
     <title></title>
 </head>
 <body>
 <header th:replace="fragments/parts :: header"></header>
 
 <section class="pt-3 pb-2 container">
-    <h2 class="text-center mb-3">Register an account!</h2>
-    <form method="post" th:action="@{/users/register}" th:object="${user}">
+    <h2 class="text-center mb-3">Login to your account!</h2>
+    <form method="post" th:action="@{/login}" th:object="${user}">
         <label for="id" class="d-none"></label>
         <input type="text" class="d-none" id="id" th:field="*{userId}">
         <!-- JOB POSITION/EMPLOYER -->
