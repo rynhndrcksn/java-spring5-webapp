@@ -37,7 +37,7 @@ public class User implements UserDetails {
 			cascade = CascadeType.ALL,
 			mappedBy = "user"
 	)
-	private List<Authority> authorities;
+	private List<Permission> permissions;
 
 	@Override
 	public String getUsername() {
@@ -51,7 +51,7 @@ public class User implements UserDetails {
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return authorities;
+		return permissions;
 	}
 
 	@Override
