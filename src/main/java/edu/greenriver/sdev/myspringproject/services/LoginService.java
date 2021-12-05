@@ -27,13 +27,6 @@ public class LoginService implements UserDetailsService {
 		this.repo = repo;
 	}
 
-	/**
-	 * This method gets called everytime someone tries to log in.
-	 *
-	 * @param username username
-	 * @return matching user from DB.
-	 * @throws UsernameNotFoundException when username isn't found.
-	 */
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		User user = repo.findByUsername(username);

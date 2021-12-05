@@ -4,7 +4,7 @@ import edu.greenriver.sdev.myspringproject.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * Interface for dealing with JPA
+ * User interface for dealing with JPA
  *
  * @author Ryan H.
  * @version 1.0

@@ -31,6 +31,11 @@ public class MySpringProjectApplication {
 		loadAccounts(context);
 	}
 
+	/**
+	 * Loads up a default admin and user account for the web app
+	 *
+	 * @param context ApplicationContext from MySpringProjectApplication.class
+	 */
 	private static void loadAccounts(ApplicationContext context) {
 		// Get beans we need
 		IUserRepo userRepo = context.getBean(IUserRepo.class);
